@@ -38,11 +38,11 @@ const PHASE_CONFIGS: Record<TimeOfDay, TimePhaseConfig> = {
   },
   night: {
     ambientColor: 0x191970,
-    ambientIntensity: 0.2,
-    directionalColor: 0x4169e1,
-    directionalIntensity: 0.3,
+    ambientIntensity: 0.35,
+    directionalColor: 0x6688cc,
+    directionalIntensity: 0.5,
     fogColor: 0x0a0a2e,
-    fogDensity: 0.02
+    fogDensity: 0.015
   }
 };
 
@@ -162,7 +162,7 @@ export class DayNightCycle {
 
   getVisibilityMultiplier(): number {
     // Reduced visibility at night
-    if (this.currentPhase === 'night') return 0.6;
+    if (this.currentPhase === 'night') return 0.75;
     if (this.currentPhase === 'dusk' || this.currentPhase === 'dawn') return 0.8;
     return 1.0;
   }

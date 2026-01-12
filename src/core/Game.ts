@@ -102,6 +102,7 @@ export class Game {
     this.powerUpManager = new PowerUpManager(this.scene, this.terrain);
     this.themeManager = new ThemeManager(this.scene, this.ambientLight, this.directionalLight);
     this.dayNightCycle = new DayNightCycle(this.scene, this.ambientLight, this.directionalLight);
+    this.dayNightCycle.setTime('day');
     this.weatherSystem = new WeatherSystem(this.scene);
 
     this.loadLevel(this.currentLevel);
